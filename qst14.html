@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 14</title>
+</head>
+<body>
+    <div id="x">7</div>
+    <div id="y">5</div>
+    <div id="produto"></div>
+    <div id="soma"></div>
+    <button id="calcular">Calcular</button>
+    <script>
+        var x,y,soma,produto
+        x=document.getElementById("x")
+        y=document.getElementById("y")
+        produto= document.getElementById("produto")
+        soma=document.getElementById("soma");
+        
+        x.contentEditable="true"
+        y.contentEditable="true";
+        botao=document.getElementById("calcular")
+        botao.addEventListener("click",function(){
+            produto=parseInt(x.innerText)*parseInt(y.innerText)
+            soma=parseInt(x.innerText)+parseInt(y.innerText)
+            alert("A SOMA é " + soma + " e o PRODUTO é "+produto)
+        })
+        
+    </script>
+</body>
+</html>
