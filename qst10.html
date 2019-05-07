@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 10</title>
+</head>
+<body>
+    <p id="nome">João </p>
+    <br>
+    <p id="sobrenome"> Das Neves</p>
+    <h1 id= "nomecompleto"><script>document.write(nomeCompleto)</script></h1>
+    <script>
+    var nome=document.getElementById("nome"),sobrenome= document.getElementById("sobrenome"); 
+    nomeCompleto=nome.innerText+" " +sobrenome.innerText
+    document.getElementById("nomecompleto").innerText="Bem Vindo "+ nomeCompleto
+        
+    </script>
+</body>
+</html>
