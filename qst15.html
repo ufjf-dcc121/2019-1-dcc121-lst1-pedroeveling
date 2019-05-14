@@ -5,6 +5,7 @@
     <title>Questão 15</title>
 </head>
 <body>
+        
     <main>
         <section>
             <h1>
@@ -18,24 +19,51 @@
             <p id="resultado"></p>
             <button id="avaliar">avaliar</button> <button id="limpar">limpar</butto>
                 <p id="melhorias"></p>
+                
+        <script>
+                var nome,anos,confeitaria,coberturas,broas,botaoAvaliar,botaoLimpar,resultado,melhorias,media
+                nome=document.getElementById("nome");
+                tempo=document.getElementById("tempo");
+                
+                confeitaria=document.getElementById("Confeitaria");
+                coberturas=document.getElementById("Coberturas");
+                broas=document.getElementById("Broas");
+                botaoAvaliar=document.getElementById("avaliar");
+                botaoLimpar=document.getElementById("limpar");
+                botaoLimpar.addEventListener("click", limparClick)
+                botaoAvaliar.addEventListener("click",avaliarClick)
+                nome.contentEditable="true";
+                tempo.contentEditable="true";
+                coberturas.contentEditable="true";
+                confeitaria.contentEditable="true";
+                broas.contentEditable="true";
+                var media=(parseInt(broas.innerText)+parseInt(coberturas.innerText)+parseInt(broas.innerText))/3
+                function avaliarClick(){
+                    var media=(parseInt(broas.innerText)+parseInt(coberturas.innerText)+parseInt(broas.innerText))/3
+                    resultado= document.getElementById("resultado");
+                    if(media>60)
+                    resultado.innerText="Parabéns "+ nome.innerText + "! Você está aprovado com média "+ media+"!"
+                    else
+                    resultado.innerText="Você está reprovado com média "+media;
+                    if(parseInt(broas.innerText)<60)
+                    resultado.innerText=resultado.innerText+" Voce precisa estudar mais Broas"
+                    if(parseInt(coberturas.innerText)<60)
+                    resultado.innerText=resultado.innerText+" Voce precisa estudar mais Coberturas"
+                    if(parseInt(confeitaria.innerText)<60)
+                    resultado.innerText=resultado.innerText+" Voce precisa estudar mais confeitaria"
+
+                };
+                function limparClick(){
+                    nome.innerText=" ";
+                    tempo.innerText=" ";
+                    confeitaria.innerText=" ";
+                    coberturas.innerText=" ";
+                    broas.innerText=" ";
+                };
+               
+                    </script>
         </section>  
 
     </main>
-    <script>
-        var nome,anos,confeitaria,coberturas,broas,botaoAvaliar,botaoLimpar,resultado,melhorias,media
-        nome=document.getElementById("nome")
-        tempo=document.getElementById("tempo")
-        confeitaria=document.getElementById("Confeitaria")
-        coberturas=document.getElementById("Coberturas")
-        broas=document.getElementById("Broas")
-        botaoAvaliar=document.getElementById("avaliar")
-        botaoLimpar=document.getElementById("limpar")
-        nome.contentEditable="true"
-        tempo.contentEditable="true"
-        confeitaria.contentEditable="true"
-        coberturas.contentEditable="true"
-        broas.contentEditable="true"
-
-            </script>
-</body>
+    </body>
 </html>
