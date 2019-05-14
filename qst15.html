@@ -11,7 +11,7 @@
                     Resultado da Avaliação
             </h1>
             <p>
-                Olá Fulano, você está matriculado há <span id="tempo">2</span> 
+                Olá <span id="nome">Fulano</span>, você está matriculado há <span id="tempo">2</span> 
                 anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="Confeitaria">70</span>
                 em Confeitaria Básica; <span id="Coberturas">80</span> em Coberturas e <span id="Broas">60</span> em Broas e Bolos.
             </p>
@@ -21,5 +21,21 @@
         </section>  
 
     </main>
+    <script>
+        var nome,anos,confeitaria,coberturas,broas,botaoAvaliar,botaoLimpar,resultado,melhorias,media
+        nome=document.getElementById("nome")
+        tempo=document.getElementById("tempo")
+        confeitaria=document.getElementById("Confeitaria")
+        coberturas=document.getElementById("Coberturas")
+        broas=document.getElementById("Broas")
+        botaoAvaliar=document.getElementById("avaliar")
+        botaoLimpar=document.getElementById("limpar")
+        nome.contentEditable="true"
+        tempo.contentEditable="true"
+        confeitaria.contentEditable="true"
+        coberturas.contentEditable="true"
+        broas.contentEditable="true"
+
+            </script>
 </body>
 </html>
